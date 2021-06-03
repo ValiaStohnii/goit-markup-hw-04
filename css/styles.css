@@ -6,6 +6,7 @@
   --footer-background-color: #2f303a;
   --team-section-color: #f5f4fa;
   --studio-color: #000000;
+  --icon-color: #afb1b8;
 }
 
 body {
@@ -115,6 +116,8 @@ img {
 }
 
 .contacts-list a {
+  display: flex;
+  align-items: center;
   padding-top: 32px;
   padding-bottom: 32px;
   padding-left: 0;
@@ -128,10 +131,21 @@ img {
 .contacts-list {
   display: flex;
   margin-left: auto;
+  align-items: center;
 }
 .contacts-list .item + .item {
   margin-left: 50px;
 }
+
+.icon:hover {
+  fill: var(--link-color);
+}
+
+.icon {
+  margin-right: 10px;
+  fill: #757575;
+}
+
 /*HEADER*/
 
 /*HERO SECTION*/
@@ -262,6 +276,20 @@ img {
   margin-bottom: 10px;
   margin-top: 0px;
 }
+.features-icon-background {
+  display: flex;
+  width: 270px;
+  height: 120px;
+  background: #f5f4fa;
+  border-radius: 4px;
+  margin-bottom: 30px;
+  margin-right: 0;
+  align-items: center;
+  justify-content: center;
+}
+.antenna {
+  display: inline-block;
+}
 /*Features*/
 
 /*IMG-SECTION*/
@@ -333,6 +361,16 @@ img {
   line-height: 1.87;
 }
 
+.projects a {
+  text-decoration: none;
+  color: var(--primary-text-color);
+}
+.projects li:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+  cursor: pointer;
+}
+
 /*PROJECT SECTION*/
 
 /*TEAM SECTION*/
@@ -358,7 +396,7 @@ img {
   padding-bottom: 94px;
   background-color: var(--team-section-color);
 }
-.team-card li {
+.team-item {
   margin-right: 30px;
   width: 270px;
   background-color: #ffff;
@@ -383,7 +421,75 @@ img {
   width: 100%;
   margin-top: 0;
 }
+.icons-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 16px;
+}
+.icons-list li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  margin-right: 10px;
+}
+
+.team-icon {
+  width: 20px;
+  height: 20px;
+  fill: var(--icon-color);
+}
+
+.team-icon:hover {
+  fill: var(--team-section-color);
+}
+.icons-list li:hover {
+  background-color: var(--link-color);
+  border-radius: 50%;
+}
+
 /*TEAM SECTION*/
+
+/*best-client*/
+.best-client {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.client-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.client-list li {
+  margin-right: 30px;
+}
+.client-list a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 170px;
+  height: 92px;
+  border: 1px solid var(--icon-color);
+  border-radius: 4px;
+}
+.client-list li:last-child {
+  margin-right: 0;
+}
+.client-icon {
+  width: 106px;
+  height: 60px;
+  fill: var(--icon-color);
+}
+.client-icon:hover {
+  fill: var(--link-color);
+  cursor: pointer;
+}
+.client-list a:hover {
+  border: 1px solid var(--link-color);
+}
+/*best-client*/
 
 /*FOOTER*/
 
@@ -429,4 +535,50 @@ img {
   line-height: 1.19;
 }
 
+.footer-icons-list li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  margin-right: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+.footer-icons-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 16px;
+}
+.footer-icon {
+  width: 20px;
+  height: 20px;
+  fill: #ffff;
+}
+.footer-icon:hover {
+  fill: var(--team-section-color);
+}
+.footer-icons-list li:hover {
+  background-color: var(--link-color);
+  border-radius: 50%;
+}
+.footer-caption {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  color: #ffff;
+}
+
+.footer-container {
+  display: flex;
+}
+.media-contacts {
+  padding-top: 12px;
+  margin-left: 70px;
+}
 /*FOOTER*/
