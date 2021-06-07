@@ -82,6 +82,7 @@ img {
 
 .contacts-list a:hover {
   color: var(--link-color);
+  fill: currentColor;
 }
 
 .link:hover,
@@ -115,7 +116,7 @@ img {
   text-decoration: none;
 }
 
-.contacts-list a {
+.contacts-link {
   display: flex;
   align-items: center;
   padding-top: 32px;
@@ -127,6 +128,12 @@ img {
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
+  fill: #757575;
+}
+.contacts-link:hover,
+.contacts-link:focus {
+  fill: var(--link-color);
+  color: var(--link-color);
 }
 .contacts-list {
   display: flex;
@@ -137,13 +144,8 @@ img {
   margin-left: 50px;
 }
 
-.icon:hover {
-  fill: var(--link-color);
-}
-
 .icon {
   margin-right: 10px;
-  fill: #757575;
 }
 
 /*HEADER*/
@@ -182,7 +184,8 @@ img {
 }
 
 .hero-button,
-.button:hover {
+.button:hover,
+.button:focus {
   color: var(--body-background-color);
   background-color: var(--link-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
@@ -200,7 +203,7 @@ img {
       rgba(0, 0, 0, 0.4)
     ),
     url(../images/hero.jpg);
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -278,14 +281,14 @@ img {
 }
 .features-icon-background {
   display: flex;
+  align-items: center;
+  justify-content: center;
   width: 270px;
   height: 120px;
   background: #f5f4fa;
   border-radius: 4px;
   margin-bottom: 30px;
   margin-right: 0;
-  align-items: center;
-  justify-content: center;
 }
 .antenna {
   display: inline-block;
@@ -428,26 +431,28 @@ img {
   margin-top: 16px;
 }
 .icons-list li {
+  margin-right: 10px;
+}
+
+.team-link {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 44px;
   height: 44px;
-  margin-right: 10px;
+  border-radius: 50%;
+  fill: var(--icon-color);
 }
 
 .team-icon {
   width: 20px;
   height: 20px;
-  fill: var(--icon-color);
 }
 
-.team-icon:hover {
+.team-link:hover,
+.team-link:focus {
   fill: var(--team-section-color);
-}
-.icons-list li:hover {
   background-color: var(--link-color);
-  border-radius: 50%;
 }
 
 /*TEAM SECTION*/
@@ -465,7 +470,7 @@ img {
 .client-list li {
   margin-right: 30px;
 }
-.client-list a {
+.client-link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -473,6 +478,7 @@ img {
   height: 92px;
   border: 1px solid var(--icon-color);
   border-radius: 4px;
+  fill: var(--icon-color);
 }
 .client-list li:last-child {
   margin-right: 0;
@@ -480,15 +486,14 @@ img {
 .client-icon {
   width: 106px;
   height: 60px;
-  fill: var(--icon-color);
 }
-.client-icon:hover {
+.client-link:hover,
+.client-link:focus {
   fill: var(--link-color);
   cursor: pointer;
-}
-.client-list a:hover {
   border: 1px solid var(--link-color);
 }
+
 /*best-client*/
 
 /*FOOTER*/
@@ -535,7 +540,7 @@ img {
   line-height: 1.19;
 }
 
-.footer-icons-list li {
+.footer-icons-link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -556,10 +561,10 @@ img {
   height: 20px;
   fill: #ffff;
 }
-.footer-icon:hover {
+
+.footer-icons-link:hover,
+.footer-icons-link:focus {
   fill: var(--team-section-color);
-}
-.footer-icons-list li:hover {
   background-color: var(--link-color);
   border-radius: 50%;
 }
